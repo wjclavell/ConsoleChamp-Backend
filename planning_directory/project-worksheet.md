@@ -21,6 +21,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. Most likely I will focus just on console exclusive games.
 
+## Frontend Repo
+
+[Frontend](https://github.com/wjclavell/FrontEnd-P2/blob/master/planning_directory/project-worksheet.md)
+
 #### References/Relationships
 
 Main video game collection with references to -->
