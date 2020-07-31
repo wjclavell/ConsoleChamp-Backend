@@ -11,7 +11,10 @@ const PORT = process.env.PORT;
 const NODE_ENV = process.env.NODE_ENV;
 
 // CORS security config
-const whitelist = ["http://localhost:3000/"];
+const whitelist = [
+  "http://localhost:3000/",
+  "https://flamboyant-ramanujan-b00f82.netlify.app/",
+];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
