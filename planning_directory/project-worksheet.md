@@ -43,7 +43,7 @@ Upload images of functioning Postman routes (will be updated)
 
 The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-#### MVP (examples)
+#### MVP
 
 - controllers
 - seed data
@@ -71,7 +71,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Test Routes    |    H     |      1hr       |      -hr       |     -hr     |
 | Server.js      |    M     |      .5hr      |      -hr       |     -hr     |
 | Schemas/Models |    H     |      2hrs      |      -hr       |     -hr     |
-| Total          |    -     |      9hrs      |      -hrs      |    -hrs     |
+| Total          |    -     |     11hrs      |      -hrs      |    -hrs     |
 
 #### PostMVP
 
