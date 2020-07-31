@@ -9,7 +9,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 | Day   | Deliverable                                                      | Status     |
 | ----- | ---------------------------------------------------------------- | ---------- |
 | Day 1 | Project Description                                              | Complete   |
-| Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Incomplete |
+| Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Complete   |
 | Day 2 | Working RestAPI                                                  | Incomplete |
 | Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Incomplete |
 | Day 4 | MVP & Bug Fixes                                                  | Incomplete |
@@ -33,16 +33,7 @@ This project will be a full CRUD application for Video Game Ratings. It will be 
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.
-
-- [Mobile](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/mobile.png)
-- [Tablet](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/nav-highlight.gif)
-- [Desktop](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/desktop.png)
-
-Wireframing Resources:
-
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
+Upload images of functioning Postman routes (will be updated)
 
 ## Time/Priority Matrix
 
@@ -54,46 +45,41 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP (examples)
 
-- Pull data using google json api
-- Render data on page
-- Allow user to choose favorites
-- Save their choices in firebase
+- controllers
+- seed data
+- routers
+- server.js
+- test routes
+- schemas/models
 
 #### PostMVP
 
-- Anything else that is not MVP
+- user signup/login
+- favorite games to save in separate collection
 
 ## Functional Components
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions. Try and capture what logic would need to be defined if the game was broken down into the following categories.
 
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
-
 #### MVP
 
-| Component               | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ----------------------- | :------: | :------------: | :------------: | :---------: |
-| Hamburger               |    H     |      1hr       |     1.5hr      |     -hr     |
-| Project Previews        |    H     |      3hr       |      -hr       |     -hr     |
-| Regular Nav             |    H     |       H        |      -hr       |     -hr     |
-| Adding Form             |    H     |     1.5hr      |      -hr       |     -hr     |
-| Other sections and flex |    M     |      4hr       |      2hr       |     -hr     |
-| Working with API        |    H     |      3hrs      |      2hr       |     -hr     |
-| Responsive              |    H     |      3hr       |      -hr       |     -hr     |
-| Social Media Icons      |    L     |      1hr       |      -hr       |     -hr     |
-| Total                   |    H     |    15.5hrs     |      -hrs      |    -hrs     |
+| Component      | Priority | Estimated Time | Time Invetsted | Actual Time |
+| -------------- | :------: | :------------: | :------------: | :---------: |
+| Controllers    |    H     |      4hr       |      -hr       |     -hr     |
+| Seed Data      |    H     |      3hr       |      -hr       |     -hr     |
+| Routers        |    H     |      .5hr      |      -hr       |     -hr     |
+| Test Routes    |    H     |      1hr       |      -hr       |     -hr     |
+| Server.js      |    M     |      .5hr      |      -hr       |     -hr     |
+| Schemas/Models |    H     |      2hrs      |      -hr       |     -hr     |
+| Total          |    -     |      9hrs      |      -hrs      |    -hrs     |
 
 #### PostMVP
 
-| Component             | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --------------------- | :------: | :------------: | :------------: | :---------: |
-| Project Hover         |    L     |      3hr       |      -hr       |     -hr     |
-| Banner letters wiggle |    L     |      1hr       |      -hr       |     -hr     |
-| Interactive Banner    |    M     |      4hr       |      -hr       |     -hr     |
-| Materialize           |    H     |      4hr       |      -hr       |     -hr     |
-| Bootstrap             |    H     |      4hr       |      -hr       |     -hr     |
-| Make own icon         |    L     |      4hr       |      -hr       |     -hr     |
-| Total                 |    H     |     20hrs      |      -hrs      |    -hrs     |
+| Component         | Priority | Estimated Time | Time Invetsted | Actual Time |
+| ----------------- | :------: | :------------: | :------------: | :---------: |
+| User Signup/Login |    M     |     3.5hr      |      -hr       |     -hr     |
+| Favorites         |    L     |     3.5hr      |      -hr       |     -hr     |
+| Total             |    -     |      7hrs      |      -hrs      |    -hrs     |
 
 ## Additional Libraries
 
