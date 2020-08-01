@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 let MONGODB_URI =
   process.env.PROD_MONGODB ||
   process.env.MONGODB_URI ||
-  "mongodb://localhost:27017/gameRatings";
+  "mongodb://localhost:27017/";
 
 // cononect to db
 mongoose
