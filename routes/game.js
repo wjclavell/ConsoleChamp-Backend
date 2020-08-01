@@ -2,6 +2,7 @@ const express = require("express");
 const gameRouter = express.Router();
 const {
   index,
+  show,
   ps4,
   xbox,
   Nswitch,
@@ -12,6 +13,9 @@ const {
 
 // show all games
 gameRouter.get("/", index);
+
+// show one game
+gameRouter.get("/:id", show);
 
 //ps4 games filter
 gameRouter.get("/ps4", ps4);

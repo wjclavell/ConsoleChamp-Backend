@@ -12,6 +12,16 @@ const index = async (req, res) => {
   }
 };
 
+//* SHOW
+const show = async (req, res) => {
+  try {
+    const oneGame = await Game.findById(req.params.id);
+    res.status(200).json(oneGame);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
 //* show ps4 games
 const ps4 = async (req, res) => {
   try {
@@ -76,4 +86,4 @@ const destroy = async (req, res) => {
   }
 };
 
-module.exports = { index, ps4, xbox, Nswitch, create, update, destroy };
+module.exports = { index, show, ps4, xbox, Nswitch, create, update, destroy };
