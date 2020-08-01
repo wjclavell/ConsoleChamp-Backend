@@ -37,7 +37,7 @@ app.use(morgan("dev"));
 // routes and routers
 // app.use("/", routes);
 app.get("/", (req, res) => {
-  res.send("The server is connected");
+  res.send("Still working? Yup!");
 });
 
 // listener
