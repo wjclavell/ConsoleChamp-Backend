@@ -76,7 +76,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component      | Priority | Estimated Time | Time Invetsted | Actual Time |
 | -------------- | :------: | :------------: | :------------: | :---------: |
-| Controllers    |    H     |      4hr       |     2.75hr     |     -hr     |
+| Controllers    |    H     |      4hr       |     3.25hr     |     -hr     |
 | Seed Data      |    H     |      3hr       |     1.75hr     |     -hr     |
 | Routers        |    H     |      .5hr      |      .5hr      |     -hr     |
 | Test Routes    |    H     |      1hr       |      .5hr      |     -hr     |
