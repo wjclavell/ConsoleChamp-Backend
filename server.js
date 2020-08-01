@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const cors = require("cors");
-const gameRoutes = require("./routes");
+const gameRoutes = require("./routes/game");
 
 // global variables
 const PORT = process.env.PORT;

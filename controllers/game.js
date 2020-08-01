@@ -15,7 +15,9 @@ const index = async (req, res) => {
 //* show ps4 games
 const ps4 = async (req, res) => {
   try {
-    const ps4games = await Game.find({ console: "PS4" });
+    const ps4games = await Game.find({ console: "PS4" }).populate(
+      "criticRating"
+    );
     res.status(200).json(ps4games);
   } catch (err) {
     res.status(400).send(err);
@@ -42,4 +44,36 @@ const Nswitch = async (req, res) => {
   }
 };
 
-module.exports = { index, ps4, xbox, Nswitch };
+//* CREATE
+const create = async (req, res) => {
+  try {
+    const newGame = await Game.create(req.body);
+    res.status(200).json(newGame);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
+//* UPDATE
+const update = async (req, res) => {
+  try {
+    const updatedGame = await Game.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.status(200).json(updatedGame);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
+//* DELETE
+const destroy = async (req, res) => {
+  try {
+    const deletedGame = await Game.findByIdAndDelete(req.params.id);
+    res.status(200).json(deletedGame);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
+module.exports = { index, ps4, xbox, Nswitch, create, update, destroy };
