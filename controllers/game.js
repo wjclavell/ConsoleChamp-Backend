@@ -15,44 +15,52 @@ const index = async (req, res) => {
 //* SHOW
 const show = async (req, res) => {
   try {
-    const oneGame = await Game.findById(req.params.id);
+    const oneGame = await Game.findById(req.params.id).populate("criticRating");
     res.status(200).json(oneGame);
   } catch (err) {
     res.status(400).send(err);
   }
 };
 
-//* show ps4 games
-const ps4 = async (req, res) => {
+//* show games by console
+const console = async (req, res) => {
   try {
-    const ps4games = await Game.find({ console: "PS4" }).populate(
-      "criticRating"
-    );
-    res.status(200).json(ps4games);
+    const consolegames = await Game.find({ console: req.params.console });
+    res.status(200).json(consolegames);
   } catch (err) {
     res.status(400).send(err);
   }
 };
 
-//* show xbox games
-const xbox = async (req, res) => {
-  try {
-    const xboxgames = await Game.find({ console: "Xbox One" });
-    res.status(200).json(xboxgames);
-  } catch (err) {
-    res.status(400).send(err);
-  }
-};
+// //* show ps4 games
+// const ps4 = async (req, res) => {
+//   try {
+//     const ps4games = await Game.find({ console: "PS4" });
+//     res.status(200).json(ps4games);
+//   } catch (err) {
+//     res.status(400).send(err);
+//   }
+// };
 
-//* show switch games
-const Nswitch = async (req, res) => {
-  try {
-    const switchgames = await Game.find({ console: "Nintendo Switch" });
-    res.status(200).json(switchgames);
-  } catch (err) {
-    res.status(400).send(err);
-  }
-};
+// //* show xbox games
+// const xbox = async (req, res) => {
+//   try {
+//     const xboxgames = await Game.find({ console: "Xbox One" });
+//     res.status(200).json(xboxgames);
+//   } catch (err) {
+//     res.status(400).send(err);
+//   }
+// };
+
+// //* show switch games
+// const Nswitch = async (req, res) => {
+//   try {
+//     const switchgames = await Game.find({ console: "Nintendo Switch" });
+//     res.status(200).json(switchgames);
+//   } catch (err) {
+//     res.status(400).send(err);
+//   }
+// };
 
 //* CREATE
 const create = async (req, res) => {
@@ -86,4 +94,14 @@ const destroy = async (req, res) => {
   }
 };
 
-module.exports = { index, show, ps4, xbox, Nswitch, create, update, destroy };
+module.exports = {
+  index,
+  show,
+  console,
+  /*ps4,
+  xbox,
+  Nswitch,*/
+  create,
+  update,
+  destroy,
+};

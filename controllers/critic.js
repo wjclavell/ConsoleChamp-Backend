@@ -2,15 +2,15 @@ const db = require("../db");
 const Game = require("../models/game");
 const Critic = require("../models/critic");
 
-// //* INDEX
-// const index = async (req, res) => {
-//   try {
-//     const allCritics = await Game.find({});
-//     res.status(200).json(allCritics);
-//   } catch (err) {
-//     res.status(400).send(err);
-//   }
-// };
+//* INDEX
+const index = async (req, res) => {
+  try {
+    const allCritics = await Critic.find({});
+    res.status(200).json(allCritics);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
 
 //* CREATE
 const create = async (req, res) => {
@@ -40,4 +40,4 @@ const update = async (req, res) => {
   }
 };
 
-module.exports = { create, update };
+module.exports = { create, update, index };
