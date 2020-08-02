@@ -40,4 +40,15 @@ const update = async (req, res) => {
   }
 };
 
-module.exports = { create, update, index };
+//* DELETE
+//* DELETE
+const destroy = async (req, res) => {
+  try {
+    const deletedCritic = await Critic.findByIdAndDelete(req.params.id);
+    res.status(200).json(deletedCritic);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
+module.exports = { create, update, index, destroy };

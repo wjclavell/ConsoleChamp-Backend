@@ -1,14 +1,11 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 // USING ENV URI IF AVAILABLE
-let MONGODB_URI =
-  process.env.PROD_MONGODB ||
-  process.env.MONGODB_URI ||
-  "mongodb://localhost:27017/gameRatings";
-console.log(MONGODB_URI);
+const mongoURI = process.env.mongoURI + "gameRatings";
+console.log(mongoURI);
 // cononect to db
 mongoose
-  .connect(MONGODB_URI, {
+  .connect(mongoURI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
