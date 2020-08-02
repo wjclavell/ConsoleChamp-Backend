@@ -1,6 +1,27 @@
 const db = require("../db");
 const Game = require("../models/game");
 const User = require("../models/user");
+const { all } = require("../routes/game");
+
+//* INDEX
+const index = async (req, res) => {
+  try {
+    const allUsers = await User.find({});
+    res.status(200).json(allUsers);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
+//* SHOW
+const show = async (req, res) => {
+  try {
+    const oneUser = await User.findById(req.params.id).populate("criticRating");
+    res.status(200).json(oneUser);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
 
 //* CREATE
 const create = async (req, res) => {
@@ -38,4 +59,4 @@ const destroy = async (req, res) => {
   }
 };
 
-module.exports = { create, update, destroy };
+module.exports = { index, show, create, update, destroy };
