@@ -76,12 +76,12 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component      | Priority | Estimated Time | Time Invetsted | Actual Time |
 | -------------- | :------: | :------------: | :------------: | :---------: |
-| Controllers    |    H     |      4hr       |     3.25hr     |     -hr     |
-| Seed Data      |    H     |      3hr       |     1.75hr     |     -hr     |
+| Controllers    |    H     |      4hr       |      4hr       |     -hr     |
+| Seed Data      |    H     |      3hr       |      2hr       |     -hr     |
 | Routers        |    H     |      .5hr      |      .5hr      |     -hr     |
-| Test Routes    |    H     |      1hr       |      .5hr      |     -hr     |
+| Test Routes    |    H     |      1hr       |      1hr       |     -hr     |
 | Server.js      |    M     |      .5hr      |      .5hr      |     -hr     |
-| Schemas/Models |    H     |      2hrs      |      1hr       |     -hr     |
+| Schemas/Models |    H     |      2hrs      |     1.25hr     |     -hr     |
 | Total          |    -     |     11hrs      |      -hrs      |    -hrs     |
 
 #### PostMVP
