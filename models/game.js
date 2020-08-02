@@ -13,6 +13,12 @@ const gameSchema = new Schema(
         ref: "Critic",
       },
     ],
+    userRating: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
     description: { type: String, required: true },
   },
   { timestamps: true }

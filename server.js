@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const gameRoutes = require("./routes/game");
 const criticRoutes = require("./routes/critic");
+const userRoutes = require("./routes/user");
 
 // global variables
 const PORT = process.env.PORT;
@@ -38,6 +39,7 @@ app.use(morgan("dev"));
 // routes and routers
 app.use("/games", gameRoutes);
 app.use("/critics", criticRoutes);
+app.use("/users", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Still working? Yup!");
