@@ -4,9 +4,9 @@ const {
   index,
   show,
   console,
-  ps4,
+  /*ps4,
   xbox,
-  Nswitch,
+  Nswitch,*/
   create,
   update,
   destroy,
