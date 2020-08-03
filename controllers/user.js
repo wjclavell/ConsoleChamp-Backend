@@ -26,9 +26,8 @@ const show = async (req, res) => {
 //* CREATE
 const create = async (req, res) => {
   try {
-    let videoGame = await Game.findOne({ title: req.body.game });
-    req.body.game = videoGame._id;
     const rating = await User.create(req.body);
+    let videoGame = await Game.findOne({ title: req.body.game });
     await videoGame.userRating.push(rating._id);
     await videoGame.save();
     res.status(200).json(rating);
