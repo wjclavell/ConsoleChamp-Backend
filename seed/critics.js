@@ -218,6 +218,49 @@ const criticSeed = [
     excerpt:
       "The Origami King is a truly likeable game despite the shallowness of its new spin on gameplay.",
   },
+  {
+    game: "Ori and the Will of the Wisps",
+    rating: 95,
+    critic: "Destructoid",
+    link:
+      "https://www.destructoid.com/stories/review-ori-and-the-will-of-the-wisps-582480.phtml",
+    excerpt:
+      "With the need to go bigger, Ori and the Will of the Wisps loses some of the simplicity and innocence of the original game, but it steps up in turn with bite and refinement.",
+  },
+  {
+    game: "Ori and the Will of the Wisps",
+    rating: 95,
+    critic: "Game Informer",
+    link:
+      "https://www.gameinformer.com/review/ori-and-the-will-of-the-wisps/ori-and-the-will-of-the-wisps-review-even-better-than-the",
+    excerpt:
+      "The story is fantastic, the world is breathtaking, and all of that pales in comparison to the wonderfully made gameplay that soars both as a platforming and combat game.",
+  },
+  {
+    game: "Ori and the Will of the Wisps",
+    rating: 90,
+    critic: "GamesRadar+",
+    link: "https://www.gamesradar.com/ori-and-the-will-of-the-wisps-review/",
+    excerpt:
+      "A gorgeous, tear-jerking platformer which improves on absolutely everything in the first game and ranks among the finest Metroidvanias available today.",
+  },
+  {
+    game: "Ori and the Will of the Wisps",
+    rating: 90,
+    critic: "IGN",
+    link: "https://www.ign.com/articles/ori-and-the-will-of-the-wisps-review",
+    excerpt:
+      "Its many new elements expand on and add to the first game’s fun without bogging it down or becoming overcomplicated. And that’s really the best praise you can give a sequel.",
+  },
+  {
+    game: "Ori and the Will of the Wisps",
+    rating: 80,
+    critic: "Gamespot",
+    link:
+      "https://www.gamespot.com/reviews/ori-and-the-will-of-the-wisps-review/1900-6417425/",
+    excerpt:
+      "Ori and the Will of the Wisps, is every bit as graceful and lovely as its predecessor, even if some of the emotional beats and exploration feel a little less novel the second time around.",
+  },
 ];
 
 const addRatings = async () => {
