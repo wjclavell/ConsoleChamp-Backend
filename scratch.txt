@@ -1,3 +1,0 @@
-mongodb.//:localhost:27017/
-
-'mongodb+srv://quab:pwquab728pw@cluster0.tgdey.mongodb.net/gameRatings?retryWrites=true&w=majority'
