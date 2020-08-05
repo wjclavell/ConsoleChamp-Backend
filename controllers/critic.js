@@ -12,10 +12,11 @@ const index = async (req, res) => {
   }
 };
 
+//*SHOW
 const show = async (req, res) => {
   try {
     const oneCritic = await Critic.findById(req.params.id);
-    res.status.json(oneCritic);
+    res.status(200).json(oneCritic);
   } catch (err) {
     res.status(400).send(err);
   }
