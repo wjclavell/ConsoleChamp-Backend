@@ -14,7 +14,7 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
   try {
-    const oneCritic = Critic.findById(req.params.id);
+    const oneCritic = await Critic.findById(req.params.id);
     res.status.json(oneCritic);
   } catch (err) {
     res.status(400).send(err);
