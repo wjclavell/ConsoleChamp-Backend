@@ -12,6 +12,15 @@ const index = async (req, res) => {
   }
 };
 
+const show = async (req, res) => {
+  try {
+    const oneCritic = Critic.findById(req.params.id);
+    res.status.json(oneCritic);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
+
 //* CREATE
 const create = async (req, res) => {
   try {
@@ -41,7 +50,6 @@ const update = async (req, res) => {
 };
 
 //* DELETE
-//* DELETE
 const destroy = async (req, res) => {
   try {
     const deletedCritic = await Critic.findByIdAndDelete(req.params.id);
@@ -51,4 +59,4 @@ const destroy = async (req, res) => {
   }
 };
 
-module.exports = { create, update, index, destroy };
+module.exports = { create, update, index, show, destroy };

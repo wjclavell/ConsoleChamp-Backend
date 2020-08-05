@@ -1,9 +1,18 @@
 const express = require("express");
 const criticRouter = express.Router();
-const { create, update, index, destroy } = require("../controllers/critic");
+const {
+  create,
+  update,
+  index,
+  show,
+  destroy,
+} = require("../controllers/critic");
 
 //view all the critic ratings
 criticRouter.get("/", index);
+
+//view one critic review
+criticRouter.get("/:id", show);
 
 //insert a new critic review for a game
 criticRouter.post("/", create);
