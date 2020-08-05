@@ -10,9 +10,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 | ----- | ---------------------------------------------------------------- | ---------- |
 | Day 1 | Project Description                                              | Complete   |
 | Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Complete   |
-| Day 2 | Working RestAPI                                                  | Incomplete |
-| Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Incomplete |
-| Day 4 | MVP & Bug Fixes                                                  | Incomplete |
+| Day 2 | Working RestAPI                                                  | Complete   |
+| Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Complete   |
+| Day 4 | MVP & Bug Fixes                                                  | Complete   |
 | Day 5 | Final Touches and Present                                        | Incomplete |
 
 ## Project Description
@@ -36,11 +36,11 @@ Main video game collection with references to -->
 
 - User can view all video games on the site
 - User can click a category (PS4, Nintendo Switch, XBOX One) to view games for that system
-- User can click on genre type to view games in that genre
+- User can click on genre type to view games in that genre (WIP)
 - User can click a game to view critic reviews
 - User can create a user review for selected game
 - User can delete and update their own reviews
-- User can add a game to the list and edit the content
+- User can add a game to the list
 
 ## Wireframes
 
@@ -74,15 +74,15 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 #### MVP
 
-| Component      | Priority | Estimated Time | Time Invetsted | Actual Time |
-| -------------- | :------: | :------------: | :------------: | :---------: |
-| Controllers    |    H     |      4hr       |      4hr       |     -hr     |
-| Seed Data      |    H     |      3hr       |      2hr       |     -hr     |
-| Routers        |    H     |      .5hr      |      .5hr      |     -hr     |
-| Test Routes    |    H     |      1hr       |      1hr       |     -hr     |
-| Server.js      |    M     |      .5hr      |      .5hr      |     -hr     |
-| Schemas/Models |    H     |      2hrs      |     1.25hr     |     -hr     |
-| Total          |    -     |     11hrs      |      -hrs      |    -hrs     |
+| Component      | Priority | Estimated Time | Time Invetsted |  Actual Time  |
+| -------------- | :------: | :------------: | :------------: | :-----------: |
+| Controllers    |    H     |      4hr       |      5hr       |      5hr      |
+| Seed Data      |    H     |      3hr       |      2hr       |      2hr      |
+| Routers        |    H     |      .5hr      |      .5hr      |     .5hr      |
+| Test Routes    |    H     |      1hr       |      2hr       |      2hr      |
+| Server.js      |    M     |      .5hr      |      .5hr      |     .5hr      |
+| Schemas/Models |    H     |      2hrs      |     1.25hr     |    1.25hr     |
+| Total          |    -     |     11hrs      |    11.25hrs    | 11.25hrs -hrs |
 
 #### PostMVP
 
@@ -94,26 +94,41 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 ## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project.
+#### Dependencies Used:
+
+- nodemon
+- cors
+- express
+- mongoose
+- morgan
+- dotenv
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description
+This is my controller for creating a new critic review (same for user review). It works by first finding the game with the same title that matches the one in the req.body, it then assigns the game id to the critic review. Afterwards I create the new critic review and push it into the game property called criticRating (which is an array of all associated reviews). This list will be automatically populated and all the reviews will automatically be averaged as well.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const create = async (req, res) => {
+  try {
+    let videoGame = await Game.findOne({ title: req.body.game });
+    req.body.game = videoGame._id;
+    const rating = await Critic.create(req.body);
+    await videoGame.criticRating.push(rating._id);
+    await videoGame.save();
+    res.status(200).json(rating);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+};
 ```
 
 ## Issues and Resolutions
 
-Use this section to list of all major issues encountered and their resolution.
+**ISSUE**: Only my GET requests were working originally
+**RESOLUTION**: Removed w=majority from mongoURI
 
-#### SAMPLE.....
-
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier  
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ISSUE**: My console route '/:console' wasn't working
+**RESOLUTION**: My show route '/:id' was using one parameter as well and being triggered first, so I added and extra path '/console/:console' before the parameter so both could work.
 
 ## Previous Project Worksheet
 
