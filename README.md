@@ -143,9 +143,9 @@ const criticSchema = new Schema(
 
 <a name="backend">
 
-### View backend repo here :
+### View frontend repo here :
 
-[Backend](https://github.com/wjclavell/BackEnd-P2)
+[Frontend](https://github.com/wjclavell/FrontEnd-P2)
 
 <a target="_blank" href="https://consolechamp.netlify.app"><img src="./assets/console-champ-alt.svg"></a>
 
