@@ -6,14 +6,14 @@ This schedule will be used to keep track of your progress throughout the week an
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-| Day   | Deliverable                                                      | Status     |
-| ----- | ---------------------------------------------------------------- | ---------- |
-| Day 1 | Project Description                                              | Complete   |
-| Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Complete   |
-| Day 2 | Working RestAPI                                                  | Complete   |
-| Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Complete   |
-| Day 4 | MVP & Bug Fixes                                                  | Complete   |
-| Day 5 | Final Touches and Present                                        | Incomplete |
+| Day   | Deliverable                                                      | Status   |
+| ----- | ---------------------------------------------------------------- | -------- |
+| Day 1 | Project Description                                              | Complete |
+| Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Complete |
+| Day 2 | Working RestAPI                                                  | Complete |
+| Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Complete |
+| Day 4 | MVP & Bug Fixes                                                  | Complete |
+| Day 5 | Final Touches and Present                                        | Complete |
 
 ## Project Description
 
@@ -74,23 +74,23 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 #### MVP
 
-| Component      | Priority | Estimated Time | Time Invetsted |  Actual Time  |
-| -------------- | :------: | :------------: | :------------: | :-----------: |
-| Controllers    |    H     |      4hr       |      5hr       |      5hr      |
-| Seed Data      |    H     |      3hr       |      2hr       |      2hr      |
-| Routers        |    H     |      .5hr      |      .5hr      |     .5hr      |
-| Test Routes    |    H     |      1hr       |      2hr       |      2hr      |
-| Server.js      |    M     |      .5hr      |      .5hr      |     .5hr      |
-| Schemas/Models |    H     |      2hrs      |     1.25hr     |    1.25hr     |
-| Total          |    -     |     11hrs      |    11.25hrs    | 11.25hrs -hrs |
+| Component      | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------- | :------: | :------------: | :-----------: | :---------: |
+| Controllers    |    H     |      4hr       |      5hr      |     5hr     |
+| Seed Data      |    H     |      3hr       |      2hr      |     2hr     |
+| Routers        |    H     |      .5hr      |     .5hr      |    .5hr     |
+| Test Routes    |    H     |      1hr       |      2hr      |     2hr     |
+| Server.js      |    M     |      .5hr      |     .5hr      |    .5hr     |
+| Schemas/Models |    H     |      2hrs      |    1.25hr     |   1.25hr    |
+| Total          |    -     |     11hrs      |   11.25hrs    |  11.25hrs   |
 
 #### PostMVP
 
-| Component         | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ----------------- | :------: | :------------: | :------------: | :---------: |
-| User Signup/Login |    M     |     3.5hr      |      -hr       |     -hr     |
-| Favorites         |    L     |     3.5hr      |      -hr       |     -hr     |
-| Total             |    -     |      7hrs      |      -hrs      |    -hrs     |
+| Component         | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------- | :------: | :------------: | :-----------: | :---------: |
+| User Signup/Login |    M     |     3.5hr      |     .5hr      |     -hr     |
+| Favorites         |    L     |     3.5hr      |      -hr      |     -hr     |
+| Total             |    -     |      7hrs      |     .5hrs     |    -hrs     |
 
 ## Additional Libraries
 
