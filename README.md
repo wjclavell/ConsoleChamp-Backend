@@ -16,7 +16,7 @@
 4. [Screenshots](#screenshots)
 5. [Technologies Used](#techused)
 6. [Database Structure](#dbstructure)
-7. [Backend Repo](#backend)
+7. [Frontend Repo](#frontend)
 
 <a name="appdescription">
 
@@ -141,9 +141,9 @@ const criticSchema = new Schema(
 
 **With full CRUD controllers/routes**
 
-<a name="backend">
-
 ### View frontend repo here :
+
+<a name="frontend">
 
 [Frontend](https://github.com/wjclavell/FrontEnd-P2)
 
