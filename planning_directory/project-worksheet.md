@@ -19,7 +19,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 [Heroku Url](https://videogame-ratings.herokuapp.com/)
 
-This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. Most likely I will focus just on console exclusive games.
+This project will be a full CRUD application for Video Game Ratings. It will be similar to `Rotten Tomatoes` or `Metacritic`. As a differentiating factor, I am choosing to focus only on console exclusive games (games that ONLY releasefor one console) and have a sort of 'ranking' to see which video game console offers the best exclusives.
 
 ## Frontend Repo
 
@@ -30,7 +30,44 @@ This project will be a full CRUD application for Video Game Ratings. It will be 
 Main video game collection with references to -->
 
 - Critic review collection
-- User review colection
+- User colection (collection is created but not used currently. In future updates I will create a login/sign up for users)
+
+**Video Game Schema:**
+
+```JS
+{
+    title: { type: String, required: true },
+    boxArt: { type: String, required: true },
+    console: { type: String, required: true },
+    genre: { type: Array, required: true },
+    releaseDate: { type: String, required: true }, // date("YYYY-mm-dd")
+    criticRating: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Critic",
+      },
+    ],
+    userRating: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+    description: { type: String, required: true },
+  }
+```
+
+**Critic Review Schema**
+
+```JS
+{
+    game: { type: String, required: true },
+    rating: { type: Number, required: true },
+    critic: { type: String, required: true },
+    link: { type: String, required: true },
+    excerpt: { type: String, required: true },
+  }
+```
 
 ## User Stories
 
@@ -38,6 +75,7 @@ Main video game collection with references to -->
 - User can click a category (PS4, Nintendo Switch, XBOX One) to view games for that system
 - User can click on genre type to view games in that genre (WIP)
 - User can click a game to view critic reviews
+- User can click link of review to view full critic review on their site
 - User can create a user review for selected game
 - User can delete and update their own reviews
 - User can add a game to the list
@@ -124,11 +162,11 @@ const create = async (req, res) => {
 
 ## Issues and Resolutions
 
-**ISSUE**: Only my GET requests were working originally
+**ISSUE**: Only my GET requests were working originally and not my other requests
 **RESOLUTION**: Removed w=majority from mongoURI
 
-**ISSUE**: My console route '/:console' wasn't working
-**RESOLUTION**: My show route '/:id' was using one parameter as well and being triggered first, so I added and extra path '/console/:console' before the parameter so both could work.
+**ISSUE**: My console route `/:console` wasn't working
+**RESOLUTION**: My show route `/:id` was using one parameter as well and being triggered first, so I added and extra path `/console/:console` before the parameter so both could work.
 
 ## Previous Project Worksheet
 
