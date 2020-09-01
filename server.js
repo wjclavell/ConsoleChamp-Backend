@@ -16,7 +16,7 @@ const NODE_ENV = process.env.NODE_ENV;
 // CORS security config
 const whitelist = [
   "http://localhost:3000/",
-  "https://gameratings.netlify.app/",
+  "https://consolechamp.netlify.app/",
 ];
 const corsOptions = {
   origin: function (origin, callback) {
@@ -48,6 +48,13 @@ app.get("/", (req, res) => {
 
 //* USER AUTH
 
+let refreshTokens = [];
+
+app.delete("logout", (req, res) => {
+  refreshTokens = refreshTokens.filter((token) => token !== req.body.token);
+  res.status(204);
+});
+
 app.post("/login", authenticateToken, (req, res) => {
   //authenticate user
 
@@ -56,11 +63,19 @@ app.post("/login", authenticateToken, (req, res) => {
 
   const accessToken = generateAccessToken(user);
   const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
+  refreshTokens.push(refreshToken);
   res.json({ accessToken: accessToken, refreshToken: refreshToken });
 });
 
 app.post("/token", (req, res) => {
   const refreshToken = req.body.token;
+  if (refreshToken == null) return res.status(401);
+  if (!refreshTokens.includes(refreshToken)) return res.status(403);
+  jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+    if (err) return res.status(403);
+    const accessToken = generateAccessToken({ name: user.name });
+    res.json({ accessToken: accessToken });
+  });
 });
 
 const authenticateToken = (req, res, next) => {
