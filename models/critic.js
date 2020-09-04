@@ -9,6 +9,7 @@ const criticSchema = new Schema(
     critic: { type: String, required: true },
     link: { type: String, required: true },
     excerpt: { type: String, required: true },
+    //maybe need a user reference here
   },
   { timestamps: true }
 );
